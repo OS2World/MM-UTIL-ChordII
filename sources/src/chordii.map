@@ -1,0 +1,361 @@
+ **INTERNAL DEVELOPMENT** Open Watcom Linker Version 1.5beta1 Limited Availability
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/03/25 16:33:51
+Executable Image: chordii.exe
+creating an OS/2 EMX executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+CGROUP                          0001:00000000        00011bc0
+DGROUP                          0002:00000000        00001260
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+TEXT32                 CODE           CGROUP         0001:00000000   00011bc0
+________TEXT           CODE           CGROUP         0001:00011bc0   00000000
+DATA32                 DATA           DGROUP         0002:00000000   000001a8
+SET1__os2dll           DATA           DGROUP         0002:000001a8   00000004
+SET2__os2dll           DATA           DGROUP         0002:000001ac   00000000
+SET3__os2dll           DATA           DGROUP         0002:000001ac   00000004
+SET1___CTOR_LIST__     DATA           DGROUP         0002:000001b0   00000004
+SET2___CTOR_LIST__     DATA           DGROUP         0002:000001b4   00000000
+SET3___CTOR_LIST__     DATA           DGROUP         0002:000001b4   00000004
+SET1___DTOR_LIST__     DATA           DGROUP         0002:000001b8   00000004
+SET2___DTOR_LIST__     DATA           DGROUP         0002:000001bc   00000000
+SET3___DTOR_LIST__     DATA           DGROUP         0002:000001bc   00000004
+SET1___crtinit1__      DATA           DGROUP         0002:000001c0   00000004
+SET2___crtinit1__      DATA           DGROUP         0002:000001c4   00000000
+SET3___crtinit1__      DATA           DGROUP         0002:000001c4   00000004
+SET1___crtexit1__      DATA           DGROUP         0002:000001c8   00000004
+SET2___crtexit1__      DATA           DGROUP         0002:000001cc   00000000
+SET3___crtexit1__      DATA           DGROUP         0002:000001cc   00000004
+SET1___eh_frame__      DATA           DGROUP         0002:000001d0   00000004
+SET2___eh_frame__      DATA           DGROUP         0002:000001d4   00000008
+SET3___eh_frame__      DATA           DGROUP         0002:000001dc   00000004
+SET1___eh_init__       DATA           DGROUP         0002:000001e0   00000004
+SET2___eh_init__       DATA           DGROUP         0002:000001e4   00000004
+SET3___eh_init__       DATA           DGROUP         0002:000001e8   00000004
+SET1___eh_term__       DATA           DGROUP         0002:000001ec   00000004
+SET2___eh_term__       DATA           DGROUP         0002:000001f0   00000004
+SET3___eh_term__       DATA           DGROUP         0002:000001f4   00000004
+SET1___fork_parent1__  DATA           DGROUP         0002:000001f8   00000004
+SET2___fork_parent1__  DATA           DGROUP         0002:000001fc   00000000
+SET3___fork_parent1__  DATA           DGROUP         0002:000001fc   00000004
+SET1___fork_child1__   DATA           DGROUP         0002:00000200   00000004
+SET2___fork_child1__   DATA           DGROUP         0002:00000204   00000000
+SET3___fork_child1__   DATA           DGROUP         0002:00000204   00000004
+________DATA           DATA           DGROUP         0002:00000210   00000000
+BSS32                  BSS            DGROUP         0002:00000210   00000360
+c_common               BSS            DGROUP         0002:00000570   00000cf0
+________BSS            BSS            DGROUP         0002:00001260   00000000
+STACK                  STACK          AUTO           0003:00000000   00100000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: U:\usr\lib\crt0wild.obj({standard input})
+0001:00000000* __text
+0002:00000000* __data
+0002:00000000* ___data_start
+0002:00000210* ___bss_start
+0002:000001a8+ __os2dll
+0002:000001b0  ___CTOR_LIST__
+0002:000001b8  ___DTOR_LIST__
+0002:000001c0* ___crtinit1__
+0002:000001c8* ___crtexit1__
+0002:000001d0  ___eh_frame__
+0002:000001e0  ___eh_init__
+0002:000001ec  ___eh_term__
+0002:000001f8+ ___fork_parent1__
+0002:00000200+ ___fork_child1__
+Module: u:/tmp\ldconv_common_o_18554f6f2cce143238.obj(common.c)
+0002:00000570  _dummy_kcs
+0002:000005b0  _dummy_chord_struct
+0001:000000a0  _tolower_str
+0001:000000ec  _toupper_str
+0001:00000169  _error
+0001:000001e3  _error_rt
+0001:00000212  _debug
+0001:00000263  _print_version
+0001:000002d4  _read_input_file
+Module: u:/tmp\ldconv_chordii_o_18554f6f2cce146118.obj(chordii.c)
+0002:000005c0+ _text_line
+0002:000006c0+ _chord
+0002:000007c0  _title1
+0002:000008c0+ _source
+0002:000009c0+ _directive
+0002:00000ac0+ _i_input
+0002:00000ac8+ _mesgbuf
+0002:00000bc8  _mesg
+0002:00000bd8  _text_font
+0002:00000be8+ _rt_text_font
+0002:00000bf8+ _rc_text_font
+0002:00000c08  _chord_font
+0002:00000c18+ _rt_chord_font
+0002:00000c28+ _rc_chord_font
+0002:00000c38  _current_file
+0002:00000c48+ _chord_line
+0002:00001048  _command_name
+0002:00001058+ _c
+0002:00001068+ _i_chord
+0002:00001078+ _i_directive
+0002:00001088+ _i_text
+0002:00001098+ _no_grid
+0002:000010a8+ _rt_no_grid
+0002:000010b8+ _rc_no_grid
+0002:000010c8  _vpos
+0002:000010d8+ _col_vpos
+0002:000010e8+ _min_col_vpos
+0002:000010f8  _hpos
+0002:00001108+ _start_of_chorus
+0002:00001118+ _end_of_chorus
+0002:00001128+ _chord_size
+0002:00001138+ _rt_chord_size
+0002:00001148+ _rc_chord_size
+0002:00001158  _text_size
+0002:00001168+ _rt_text_size
+0002:00001178+ _rc_text_size
+0002:00001188  _grid_size
+0002:00001198+ _rt_grid_size
+0002:000011a8+ _rc_grid_size
+0002:000011b8+ _i_chord_ov
+0002:000011c8+ _chord_inc
+0002:000011d8  _margin
+0002:000011e8  _top
+0002:000011f8  _bottom
+0002:00001208+ _height
+0002:00001218  _width
+0001:0000038f* _pagetype
+0001:00000414* _ps_fputc
+0001:00000484* _ps_fputs
+0001:000004be  _ps_puts
+0001:0000053a  _set_text_font
+0001:000005cd  _use_text_font
+0001:000005f8* _use_mono_font
+0001:00000632* _do_translate
+0001:000006d3* _init_page
+0001:000008f3  _do_start_of_page
+0001:000009b0* _use_chord_font
+0001:000009f3* _set_chord_font
+0001:00000ee5* _do_help
+0001:00001430* _do_about
+0001:000015df* _do_comment
+0001:0000278a  _advance
+0001:000018bd* _do_chorus_line
+0001:00001961* _do_chord
+0001:00001ac6* _print_chord_line
+0001:00001ceb  _init_ps
+0001:00001ee4* _do_page_numbering
+0001:000021ad* _do_end_of_phys_page
+0001:00002287  _do_end_of_page
+0001:000023cb* _do_end_of_column
+0001:0000245f* _do_end_of_song
+0001:000024c1* _set_sys_def
+0001:00002527* _set_rc_def
+0001:000025b1* _set_rt_def
+0001:0000263b  _init_values
+0001:00002718* _do_new_song
+0001:000027c3* _print_text_line
+0001:000029bd  _do_title
+0001:00002af1  _do_subtitle
+0001:00002de9* _do_directive
+0001:00003705* _put_in_string
+0001:000037a6* _do_eol
+0001:000038c7  _process_file
+0001:00003d18  _read_chordrc
+0001:00004120  _main
+0002:00000050  _mono_font
+0002:00000054* _left_foot_even
+0002:00000058* _lpage_label
+0002:0000005c  _pagination
+0002:00000060  _v_pages
+0002:00000064  _n_lines
+0002:00000068* _max_columns
+0002:0000006c  _song_pages
+0002:00000070* _titles_flush
+0002:00000074  _first_time_in_chordrc
+0002:00000078  _scale
+0002:00000080* _pagespecs
+0002:000000b0* _pagespec
+0002:00000410* _page_label
+0002:00000414  _transpose
+0002:00000418* _h_offset
+0002:0000041c* _cur_text_size
+0002:00000420  _n_pages
+0002:00000424* _n_columns
+0002:00000428* _blank_space
+0002:0000042c  _number_all
+0002:00000430* _in_chord
+0002:00000434* _lyrics_only
+0002:00000438* _dump_only
+0002:0000043c* _in_tab
+0002:00000440* _postscript_dump
+0002:00000444* _auto_space
+0002:00000448* _need_soc
+0002:0000044c* _do_toc
+0002:00000450  _no_easy_grids
+0002:00000454* _i_directive_ov
+0002:00000458* _i_text_ov
+0002:0000045c* _in_directive
+0002:00000460  _in_chordrc
+0002:00000464* _in_chorus
+0002:00000468* _has_directive
+0002:0000046c* _has_chord
+0002:00000470* _title1_found
+0002:00000474* _number_logical
+0002:00000478  _debug_mode
+0002:0000047c* _rotation
+0002:00000480* _rt_pagespec
+0002:00000484* _rc_pagespec
+0001:00004120* main
+Module: u:/tmp\ldconv_xpose_o_18554f6f2cce1497c8.obj(xpose.c)
+0001:00004916  _do_transpose
+Module: u:/tmp\ldconv_iso_o_18554f6f2cce14baf0.obj(iso.c)
+0001:00005fff  _print_re_encode
+0001:00006a85  _re_encode
+Module: u:/tmp\ldconv_grid_o_18554f6f2cce14e9d0.obj(grid.c)
+0001:0000728e  _do_init_grid_ps
+0001:00007697* _chordcompare
+0001:00007845* _learn_chord
+0001:00007962  _add_to_chordtab
+0001:000104e2* _get_kc_entry
+0001:00007aca* _moveto
+0001:00007bcc* _draw_known_chords
+0001:00007cf4  _draw_chords
+0001:00007e5e  _clean_chordtab
+0001:00007e99  _clean_known_chords
+0001:00007f17* _count_known_chords
+0001:0000805a* _check_old_define_syntax
+0001:00008429  _do_define_chord
+0001:00008e5c  _init_known_chords
+0001:0001052a* _dump_fret
+0001:000106d3  _dump_chords
+0002:000004a0* _so_chordtab
+0002:000004a4* _so_known_chords
+0002:000004a8  _nb_chord
+0002:000004ac  _first_ptr
+0002:000004b0* _nb_known_chord
+Module: u:/tmp\ldconv_getopt_o_18554f6f2cce1518b0.obj(getopt.c)
+0001:00010ba3* __getopt_internal
+0001:00011424  _getopt
+0002:000000e0* _opterr
+0002:000000e4* _optopt
+0002:000004c0  _optarg
+0002:000004c4  _optind
+Module: u:/tmp\ldconv_toc_o_18554f6f2cce157288.obj(toc.c)
+0002:00001228+ _cur_toc_entry
+0002:00001238+ _toc_ptr
+0002:00001248+ _sub_ptr_handle
+0001:00011488* _print_toc_entry
+0001:00011568* _print_toc_entries
+0001:000115ad  _add_title_to_toc
+0001:000116a2  _add_subtitle_to_toc
+0001:000117de  _build_ps_toc
+0002:00000510* _so_toc
+Module: U:\usr\lib\libend.lib(src/libend/386/endlink386.asm)
+0002:00001260  _end
+0002:00000210  _edata
+Module: U:\usr\lib\libend.lib(src/libend/386/end.asm)
+0001:00011bc0* _etext
+0001:00011bc0* __etext
+0000:00000000* WEAK$ZERO
+0002:00001260  __end
+0002:00000210  __edata
+Module: U:\tmp\ldconv_gcc452_a_18554f6f2cce15d048.lib(__main.obj)
+0001:00011a90* ___do_global_dtors
+0001:00011a9b* ___do_global_ctors
+0001:00011ab3  ___main
+Module: U:\tmp\ldconv_gcc452_a_18554f6f2cce15d048.lib(emx-ctordtor.obj)
+0001:00011ae0  ___ctordtorInit
+0001:00011b12  ___ctordtorTerm
+Module: U:\tmp\ldconv_gcc452_a_18554f6f2cce15d048.lib(emx-eh.obj)
+0001:00011b50  ___ehInit
+0001:00011b85* ___ehTerm
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+___libc_ForkRegisterModule          libc063
+___init_app                         libc063
+__wildcard                          libc063
+__CRT_init                          libc063
+__atfork_callback                   libc063
+___libc_GLocaleCtype                libc063
+___stderrp                          libc063
+___stdoutp                          libc063
+__alloca                            gcc452
+__std_exit                          libc063
+__std_strcpy                        libc063
+__std_fprintf                       libc063
+__std_printf                        libc063
+__std_sprintf                       libc063
+__std_fopen                         libc063
+__std_fclose                        libc063
+__std_strncmp                       libc063
+__std_fputc                         libc063
+__std_puts                          libc063
+__std_fwrite                        libc063
+__std_putchar                       libc063
+__std_strcmp                        libc063
+__std_memcpy                        libc063
+__std_strtok                        libc063
+__std_strdup                        libc063
+__std_atoi                          libc063
+__std_getc                          libc063
+__std_getenv                        libc063
+__std_strlen                        libc063
+__std_freopen                       libc063
+__std_isatty                        libc063
+__std_malloc                        libc063
+__std_free                          libc063
+___ctordtorInit1                    libc063
+___ctordtorTerm1                    libc063
+__std_atexit                        libc063
+___register_frame_table             gcc452
+___deregister_frame                 gcc452
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+U:\tmp\ldconv_gcc452_a_18554f6f2cce15d048.lib
+U:\usr\lib\libc_alias.lib
+U:\usr\local452\lib\libc_dll.lib
+U:\usr\lib\libend.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  00100000 (1048576.)
+Memory size:  00112e20 (1125920.)
+Entry point address: 0001:00000000
+Link time: 00:00.47

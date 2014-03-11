@@ -1,0 +1,24 @@
+This is the OS/2 port of ChordII v.4.3, a music editor specialized in chord writing.
+
+This program reads a formatted text file (named a .cho file) which contains lyrics and
+chord description, producing a Postscript file which one can view or print via Ghostscript/
+Ghostview, or even print it directly on a Postscript printer.
+
+For those who don't know what a "chord" is: in musical theory, a "chord" is played when
+you play three or more notes together, tied by some special relations.
+
+I managed in porting it on OS/2 after a little makefile tweaking. Tried with the examples,
+chordii.exe gave a nicely-looking result.
+
+As always, while I hope this program will be useful to you, I must say I can't give any
+warranty about its use on your system. USE THIS PROGRAM AT YOUR OWN RISK. The same goes
+for a2crd, a conversion program included in this package.
+
+Please consider making a donation to Paul Smedley for his work on OS/2 developing
+environments, and GCC, and support OS/2 developing by sending feedback to those who still
+develop on OS/2 and eComStation.
+
+Have fun!
+Mentore Siesto
+Pisa, Italy
+mentore.siesto@alice.it

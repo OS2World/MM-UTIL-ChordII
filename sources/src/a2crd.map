@@ -1,0 +1,215 @@
+ **INTERNAL DEVELOPMENT** Open Watcom Linker Version 1.5beta1 Limited Availability
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       12/03/25 16:33:51
+Executable Image: a2crd.exe
+creating an OS/2 EMX executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+CGROUP                          0001:00000000        000011f0
+DGROUP                          0002:00000000        000009d0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+TEXT32                 CODE           CGROUP         0001:00000000   000011f0
+________TEXT           CODE           CGROUP         0001:000011f0   00000000
+DATA32                 DATA           DGROUP         0002:00000000   00000118
+SET1__os2dll           DATA           DGROUP         0002:00000118   00000004
+SET2__os2dll           DATA           DGROUP         0002:0000011c   00000000
+SET3__os2dll           DATA           DGROUP         0002:0000011c   00000004
+SET1___CTOR_LIST__     DATA           DGROUP         0002:00000120   00000004
+SET2___CTOR_LIST__     DATA           DGROUP         0002:00000124   00000000
+SET3___CTOR_LIST__     DATA           DGROUP         0002:00000124   00000004
+SET1___DTOR_LIST__     DATA           DGROUP         0002:00000128   00000004
+SET2___DTOR_LIST__     DATA           DGROUP         0002:0000012c   00000000
+SET3___DTOR_LIST__     DATA           DGROUP         0002:0000012c   00000004
+SET1___crtinit1__      DATA           DGROUP         0002:00000130   00000004
+SET2___crtinit1__      DATA           DGROUP         0002:00000134   00000000
+SET3___crtinit1__      DATA           DGROUP         0002:00000134   00000004
+SET1___crtexit1__      DATA           DGROUP         0002:00000138   00000004
+SET2___crtexit1__      DATA           DGROUP         0002:0000013c   00000000
+SET3___crtexit1__      DATA           DGROUP         0002:0000013c   00000004
+SET1___eh_frame__      DATA           DGROUP         0002:00000140   00000004
+SET2___eh_frame__      DATA           DGROUP         0002:00000144   00000008
+SET3___eh_frame__      DATA           DGROUP         0002:0000014c   00000004
+SET1___eh_init__       DATA           DGROUP         0002:00000150   00000004
+SET2___eh_init__       DATA           DGROUP         0002:00000154   00000004
+SET3___eh_init__       DATA           DGROUP         0002:00000158   00000004
+SET1___eh_term__       DATA           DGROUP         0002:0000015c   00000004
+SET2___eh_term__       DATA           DGROUP         0002:00000160   00000004
+SET3___eh_term__       DATA           DGROUP         0002:00000164   00000004
+SET1___fork_parent1__  DATA           DGROUP         0002:00000168   00000004
+SET2___fork_parent1__  DATA           DGROUP         0002:0000016c   00000000
+SET3___fork_parent1__  DATA           DGROUP         0002:0000016c   00000004
+SET1___fork_child1__   DATA           DGROUP         0002:00000170   00000004
+SET2___fork_child1__   DATA           DGROUP         0002:00000174   00000000
+SET3___fork_child1__   DATA           DGROUP         0002:00000174   00000004
+________DATA           DATA           DGROUP         0002:00000180   00000000
+BSS32                  BSS            DGROUP         0002:00000180   00000250
+c_common               BSS            DGROUP         0002:000003d0   00000600
+________BSS            BSS            DGROUP         0002:000009d0   00000000
+STACK                  STACK          AUTO           0003:00000000   00100000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: U:\usr\lib\crt0wild.obj({standard input})
+0001:00000000* __text
+0002:00000000* __data
+0002:00000000* ___data_start
+0002:00000180* ___bss_start
+0002:00000118+ __os2dll
+0002:00000120  ___CTOR_LIST__
+0002:00000128  ___DTOR_LIST__
+0002:00000130* ___crtinit1__
+0002:00000138* ___crtexit1__
+0002:00000140  ___eh_frame__
+0002:00000150  ___eh_init__
+0002:0000015c  ___eh_term__
+0002:00000168+ ___fork_parent1__
+0002:00000170+ ___fork_child1__
+Module: u:/tmp\ldconv_common_o_18684f6f2cce1ed4e0.obj(common.c)
+0002:000003d0  _dummy_kcs
+0002:00000410  _dummy_chord_struct
+0001:000000a0* _tolower_str
+0001:000000ec* _toupper_str
+0001:00000169  _error
+0001:000001e3* _error_rt
+0001:00000212  _debug
+0001:00000263* _print_version
+0001:000002d4  _read_input_file
+Module: u:/tmp\ldconv_a2crd_o_18684f6f2cce1f0b90.obj(a2crd.c)
+0002:00000420+ _source_fd
+0002:00000430+ _p_put
+0002:00000440+ _lchord
+0002:00000450+ _ltext
+0002:00000460+ _lbuf
+0002:00000470+ _c
+0002:00000480+ _in_header
+0002:00000490  _n_lines
+0002:000004a0+ _chord_line
+0002:000005a0+ _text_line
+0002:000006a0+ _buf
+0002:000007a0  _command_name
+0002:000007b0+ _source
+0002:000008b0  _current_file
+0002:000008c0+ _mesgbuf
+0002:000009c0  _mesg
+0001:000003b0* _print_2lines
+0001:000005af* _do_help
+0001:0000063a* _do_sig
+0001:0000078d  _process_file
+0001:00000e89  _main
+0002:00000050* _ratio
+0002:00000380  _debug_mode
+0002:00000384* _dirty_chord
+0002:00000388* _dirty_text
+0002:0000038c* _in_title
+0002:00000390* _in_subtitle
+0002:00000394* _in_chorus
+0002:00000398* _spaces
+0002:0000039c* _not_space
+0001:00000e89* main
+Module: U:\usr\lib\libend.lib(src/libend/386/endlink386.asm)
+0002:000009d0  _end
+0002:00000180  _edata
+Module: U:\usr\lib\libend.lib(src/libend/386/end.asm)
+0001:000011f0* _etext
+0001:000011f0* __etext
+0000:00000000  WEAK$ZERO
+0002:000009d0  __end
+0002:00000180  __edata
+Module: U:\tmp\ldconv_gcc452_a_18684f6f2cce1f0b90.lib(__main.obj)
+0001:000010c0* ___do_global_dtors
+0001:000010cb* ___do_global_ctors
+0001:000010e3  ___main
+Module: U:\tmp\ldconv_gcc452_a_18684f6f2cce1f0b90.lib(emx-ctordtor.obj)
+0001:00001110  ___ctordtorInit
+0001:00001142  ___ctordtorTerm
+Module: U:\tmp\ldconv_gcc452_a_18684f6f2cce1f0b90.lib(emx-eh.obj)
+0001:00001180  ___ehInit
+0001:000011b5* ___ehTerm
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+___libc_ForkRegisterModule          libc063
+___init_app                         libc063
+__wildcard                          libc063
+__CRT_init                          libc063
+__atfork_callback                   libc063
+___libc_GLocaleCtype                libc063
+___stderrp                          libc063
+_optarg                             libc063
+___stdoutp                          libc063
+_optind                             libc063
+___stdinp                           libc063
+__std_exit                          libc063
+__std_strcpy                        libc063
+__std_fprintf                       libc063
+__std_printf                        libc063
+__std_sprintf                       libc063
+__std_fopen                         libc063
+__std_fclose                        libc063
+__std_putchar                       libc063
+__std_fwrite                        libc063
+__std_getenv                        libc063
+__std_strlen                        libc063
+__std_memcpy                        libc063
+__std_getc                          libc063
+__std_strncmp                       libc063
+__std_puts                          libc063
+__std_atof                          libc063
+__std_freopen                       libc063
+__std_getopt                        libc063
+___ctordtorInit1                    libc063
+___ctordtorTerm1                    libc063
+__std_atexit                        libc063
+___register_frame_table             gcc452
+___deregister_frame                 gcc452
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+U:\tmp\ldconv_gcc452_a_18684f6f2cce1f0b90.lib
+U:\usr\lib\libc_alias.lib
+U:\usr\local452\lib\libc_dll.lib
+U:\usr\lib\libend.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  00100000 (1048576.)
+Memory size:  00101bc0 (1055680.)
+Entry point address: 0001:00000000
+Link time: 00:00.06
